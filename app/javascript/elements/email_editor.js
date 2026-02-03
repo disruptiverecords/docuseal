@@ -90,8 +90,8 @@ export default targetable(class extends HTMLElement {
         }),
         EditorView.theme({
           '&': {
-            backgroundColor: 'white',
-            color: 'black',
+            backgroundColor: '#333333',
+            color: '#ededde',
             fontSize: '14px',
             fontFamily: 'monospace'
           },

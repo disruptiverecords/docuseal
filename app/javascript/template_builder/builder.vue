@@ -317,7 +317,7 @@
       </div>
       <div
         id="pages_container"
-        class="w-full overflow-x-hidden mt-0.5 pt-0.5"
+        class="w-full overflow-x-hidden mt-0.5 pt-0.5 bg-base-100"
         :class="isMobile ? 'overflow-y-auto' : 'overflow-y-hidden md:overflow-y-auto'"
       >
         <div

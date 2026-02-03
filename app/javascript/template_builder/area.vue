@@ -128,7 +128,7 @@
             ref="settingsDropdown"
             tabindex="0"
             class="dropdown-content menu menu-xs px-2 pb-2 pt-1 shadow rounded-box w-52 z-10 rounded-t-none"
-            :style="{ backgroundColor: 'white' }"
+            :style="{ backgroundColor: '#252525' }"
             @dragstart.prevent.stop
             @click="closeDropdown"
             @focusout="maybeBlurSettings"
@@ -138,7 +138,7 @@
               :field="field"
               :default-field="defaultField"
               :editable="editable"
-              :background-color="'white'"
+              :background-color="'#252525'"
               :with-required="false"
               :with-areas="false"
               :with-signature-id="withSignatureId"
