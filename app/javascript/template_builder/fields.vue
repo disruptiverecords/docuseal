@@ -3,7 +3,7 @@
     <FieldSubmitter
       :model-value="selectedSubmitter.uuid"
       class="roles-dropdown w-full rounded-lg roles-dropdown"
-      :style="withStickySubmitters ? { backgroundColor } : {}"
+      :style="withStickySubmitters ? { backgroundColor: '#1a1a1a' } : {}"
       :submitters="submitters"
       :menu-style="{ overflow: 'auto', display: 'flex', flexDirection: 'row', maxHeight: 'calc(100vh - 120px)', backgroundColor: ['', null, 'transparent'].includes(backgroundColor) ? '#252525' : backgroundColor }"
       :editable="editable && !defaultSubmitters.length"

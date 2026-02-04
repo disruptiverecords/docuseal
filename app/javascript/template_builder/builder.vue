@@ -56,7 +56,6 @@
       id="title_container"
       class="flex justify-between py-1.5 items-center pr-4 top-0 z-10 bg-base-100 title-container"
       :class="{ sticky: withStickySubmitters || isBreakpointLg }"
-      :style="{ backgroundColor: backgroundColor || '' }"
     >
       <div class="flex items-center space-x-3">
         <a
@@ -254,7 +253,7 @@
     </div>
     <div
       id="main_container"
-      class="flex main-container"
+      class="flex main-container bg-base-100"
       :class="$slots.buttons || withTitle ? (isMobile ? 'max-h-[calc(100%_-_60px)]' : 'md:max-h-[calc(100%_-_60px)]') : (isMobile ? 'max-h-[100%]' : 'md:max-h-[100%]')"
     >
       <div
@@ -262,7 +261,7 @@
         id="documents_container"
         ref="previews"
         :style="{ 'display': isBreakpointLg ? 'none' : 'initial' }"
-        class="overflow-y-auto overflow-x-hidden w-52 flex-none pr-3 mt-0.5 pt-0.5 hidden lg:block"
+        class="overflow-y-auto overflow-x-hidden w-52 flex-none pr-3 mt-0.5 pt-0.5 hidden lg:block bg-base-100"
       >
         <DocumentPreview
           v-for="(item, index) in template.schema"
@@ -285,7 +284,6 @@
         />
         <div
           class="sticky bottom-0 py-2 space-y-2 bg-base-100"
-          :style="{ backgroundColor: backgroundColor || '' }"
         >
           <Upload
             v-if="editable && withUploadButton"
@@ -439,13 +437,12 @@
       <div
         v-if="withFieldsList && !isMobile"
         id="fields_list_container"
-        class="relative w-80 flex-none mt-1 pr-4 pl-0.5 hidden md:block fields-list-container"
+        class="relative w-80 flex-none mt-1 pr-4 pl-0.5 hidden md:block fields-list-container bg-base-100"
         :class="drawField || drawCustomField ? 'overflow-hidden' : 'overflow-y-auto overflow-x-hidden'"
       >
         <div
           v-if="showDrawField || drawField || drawCustomField"
           class="sticky inset-0 h-full z-20 bg-base-100"
-          :style="{ backgroundColor: backgroundColor || '' }"
         >
           <div class="bg-base-200 rounded-lg p-5 text-center space-y-4 draw-field-container">
             <p v-if="(drawField?.type || drawFieldType || drawCustomField?.type) === 'strikethrough'">
